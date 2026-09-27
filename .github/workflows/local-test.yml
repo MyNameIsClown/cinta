@@ -1,0 +1,11 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Current path ${{ github.path }}"
+      - run: python -V
+      - run: pip install .
+      - run: cinta
