@@ -5,7 +5,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Current path ${{ github.path }}"
+      - uses: actions/checkout@v6
       - run: python -V
       - run: pip install .
       - run: cinta
